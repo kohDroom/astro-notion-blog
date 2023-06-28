@@ -3,7 +3,7 @@
 }
 .main footer {
   border-top: 1px dashed #888;
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 40px 0 0;
 }
 @media (max-width: 640px) {
@@ -11,16 +11,51 @@
     margin: 0 auto 40px;
   }
 }
+.main section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* column-gap: 50px; */
+  row-gap: 80px;
+}
+
+
+.main section h3{
+  width: 350px !important;
+  margin: -2px 0 10px 0;
+}
+
+.detail{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: #888 solid 0.5px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+}
 
 .post {
+  width: 900px;
+  /* background-color: beige; */
   margin: 0 auto 40px;
 }
 .post :global(h3) {
-  margin: 0;
+  /* margin: 0; */
   color: var(--fg);
 }
 .post footer {
   margin-top: 0.5rem;
   padding: 0;
   border: 0;
+}
+
+/* <slot name="main" />のCSS */
+.main{
+  background: var(--bg);
+  padding: 2vw;
+}
+
+/* <slot name="aside" />のCSS */
+.aside{
+  background: var(--bg);
+  padding: 2.5vw 1vw;
 }
