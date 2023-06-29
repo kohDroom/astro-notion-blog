@@ -53,7 +53,7 @@ const [posts, rankedPosts, tags, numberOfPages] = await Promise.all([
       <PostTitle post={post} />
       <PostTags post={post} />
     </div> -->
-  
+  <section>
     {
       posts.length === 0 ? (
         <NoContents contents={posts} />
@@ -70,6 +70,7 @@ const [posts, rankedPosts, tags, numberOfPages] = await Promise.all([
         ))
       )
     }
+    </section>
 
     <footer>
       <Pagination
