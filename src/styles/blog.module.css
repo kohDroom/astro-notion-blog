@@ -14,8 +14,8 @@
 .main section{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  /* column-gap: 50px; */
+  /* justify-content: space-between; */
+  column-gap: 30px;
   row-gap: 80px;
 }
 
@@ -56,6 +56,8 @@
 
 /* <slot name="aside" />のCSS */
 .aside{
+  position: sticky;
+  top: 25px;
   background: var(--bg);
   padding: 2.5vw 1vw;
 }
@@ -64,4 +66,10 @@
 .relative {
   position: relative;
   width: 350px;
+}
+
+.indexlink{
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
 }

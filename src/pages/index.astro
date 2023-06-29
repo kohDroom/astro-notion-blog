@@ -38,8 +38,10 @@ const [posts, rankedPosts, tags, numberOfPages] = await Promise.all([
             <div class={styles.indexpost} key={post.Slug}>
               <div class={styles.relative} key={post.Slug} >
                 <PostFeaturedImage post={post} />
-                <PostExcerpt post={post} />
+                <div class={styles.indexlink}>
+                  <PostExcerpt post={post}/>
                 </div>
+              </div>
               <PostTitle post={post} />
               <PostTags post={post} />
             </div>

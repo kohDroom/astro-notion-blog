@@ -7,21 +7,18 @@ export interface Props {
 
 const { post } = Astro.props
 ---
-<!-- <div class="post-featured-image">
-  <a href={getPostLink(post.Slug)}><img src={image} alt="post-featured-image" /></a>
-</div> -->
-<!-- <div class="post-excerpt">
-  <a href={post.Excerpt ? post.Excerpt : ''}>kintone</a>
-</div> -->
 
 
-<div class={post.Excerpt ? 'post-excerpt' : 'post-null'}>
-  <a href={post.Excerpt ? post.Excerpt : ''}>{post.Excerpt ? 'kintone' : ''}</a>
+<div class="post-excerpt">
+  <div class={post.Excerpt ? 'post-kintonelink' : ''}>
+    <a href={post.Excerpt ? post.Excerpt : ''}>{post.Excerpt ? 'kintone' : ''}</a>
+  </div>
 </div>
 
 
 <style>
-  .post-excerpt {
+
+  .post-kintonelink {
     background-color: white;
     width: 50px;
     height: 50px;
@@ -30,16 +27,13 @@ const { post } = Astro.props
     font-size: 0.7rem;
     text-align: center;
     line-height: 50px;
-    position: absolute;
-    right: 10px;
-    bottom: 20px;
   }
 
-  .post-excerpt a {
+  .post-kintonelink a {
     color: #58adaf !important;
   }
 
-  .post-excerpt:hover {
+  .post-kintonelink:hover {
     opacity: 0.5;
   }
   
