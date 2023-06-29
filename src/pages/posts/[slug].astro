@@ -93,6 +93,8 @@ let ogImage = ''
 if (post.FeaturedImage && post.FeaturedImage.Url) {
   ogImage = new URL(filePath(new URL(post.FeaturedImage.Url)), Astro.site)
 }
+
+
 ---
 
 <Layout
@@ -123,14 +125,15 @@ if (post.FeaturedImage && post.FeaturedImage.Url) {
   </div>
 
   <div slot="aside" class={styles.aside}>
-    <BlogPostsLink
-      heading="同カテゴリー"
-      posts={postsHavingSameTag.filter(
-        (p: interfaces.Post) => p.Slug !== post.Slug
-      )}
-    />
     <!-- <BlogPostsLink heading="Recommended" posts={rankedPosts} />
     <BlogPostsLink heading="Latest posts" posts={recentPosts} /> -->
     <BlogTagsLink heading="Categories" tags={tags} />
+    <br>
+    <BlogPostsLink
+    heading="同カテゴリー"
+    posts={postsHavingSameTag.filter(
+      (p: interfaces.Post) => p.Slug !== post.Slug
+    )}
+  />
   </div>
 </Layout>

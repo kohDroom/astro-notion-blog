@@ -35,7 +35,9 @@ const { post, enableLink = true } = Astro.props
     flex-wrap: wrap;
     gap: 6px;
     margin-left: 0.5rem;
+    justify-content: var(--jContent)
   }
+
   .post-tags a,
   .post-tags span {
     display: flex;
@@ -48,4 +50,5 @@ const { post, enableLink = true } = Astro.props
     color: rgb(50, 48, 44);
     background: rgba(227, 226, 224, 0.5);
   }
+
 </style>

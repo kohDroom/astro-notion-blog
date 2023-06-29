@@ -113,12 +113,12 @@ export async function getAllPosts(): Promise<Post[]> {
   return postsCache
 }
 
-export async function getPosts(pageSize = 10): Promise<Post[]> {
+export async function getPosts(pageSize = 30): Promise<Post[]> {
   const allPosts = await getAllPosts()
   return allPosts.slice(0, pageSize)
 }
 
-export async function getRankedPosts(pageSize = 10): Promise<Post[]> {
+export async function getRankedPosts(pageSize = 30): Promise<Post[]> {
   const allPosts = await getAllPosts()
   return allPosts
     .filter((post) => !!post.Rank)
@@ -145,7 +145,7 @@ export async function getPostByPageId(pageId: string): Promise<Post | null> {
 
 export async function getPostsByTag(
   tagName: string,
-  pageSize = 10
+  pageSize = 30
 ): Promise<Post[]> {
   if (!tagName) return []
 
