@@ -9,6 +9,7 @@ export interface Props {
 }
 
 const { prevPost, nextPost } = Astro.props
+const jContent = "flex-end"
 ---
 
 <div class="post-relative-link">
@@ -29,7 +30,7 @@ const { prevPost, nextPost } = Astro.props
         <a href={getPostLink(prevPost.Slug)} class="colored">
           <div style="text-align: right">▶︎ Previous</div>
           <div style="text-align: right">{prevPost.Title}</div>
-          <PostTags post={prevPost} enableLink={false} />
+          <div style=":root {{}}"><PostTags post={prevPost} enableLink={false} /></div>
         </a>
       )
     }
