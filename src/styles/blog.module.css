@@ -59,3 +59,9 @@
   background: var(--bg);
   padding: 2.5vw 1vw;
 }
+
+/* kintoneリンクを貼るためのCSS */
+.relative {
+  position: relative;
+  width: 350px;
+}
